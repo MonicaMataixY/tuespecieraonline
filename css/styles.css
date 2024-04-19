@@ -1,0 +1,1646 @@
+* { margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --green-color: #32C663;
+    --orange-color: #E8783A;
+    --blue-color: #4A9FE5;
+    --yellow-color: #CFCB2C;
+    --red-color: #E03647;
+    --black-color: #000;
+    --white-color: #fff;
+    --pane-padding: 1.25rem 3.12rem 1.25rem 3.12rem;
+}
+
+/*
+TIPOGRAFÍAS
+*/
+
+@font-face {
+    font-family: "Bangers"; 
+    src: url(../css/fonts/Bangers-Regular.woff2?#iefix) format('embedded-opentype'),
+        url(../css/fonts/Bangers-Regular.woff2) format('woff2'),
+        url(../css/fonts/Bangers-Regular.woff) format('woff'),
+        url(../css/fonts/Bangers-Regular.svg) format('svg'),
+       url(../css/fonts/Bangers-Regular.otf) format('otf'),
+       url(../css/fonts/Bangers-Regular.eot) format('eot'),
+       url(../css/fonts/Bangers-Regular.ttf) format('ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../css/fonts/Montserrat-SemiBold.woff2?#iefix) format('embedded-opentype'),
+        url(../css/fonts/Montserrat-SemiBold.woff2) format('woff2'),
+        url(../css/fonts/Montserrat-SemiBold.woff) format('woff'),
+        url(../css/fonts/Montserrat-SemiBold.svg) format('svg'),
+        url(../css/fonts/Montserrat-SemiBold.eot) format('eot'),
+        url(../css/fonts/Montserrat-SemiBold.ttf) format('ttf');
+    font-weight: 600;
+
+    font-family: "Montserrat";
+    src: url(../css/fonts/Montserrat-Medium.woff2?#iefix) format('embedded-opentype'),
+        url(../css/fonts/Montserrat-Medium.woff2) format('woff2'),
+        url(../css/fonts/Montserrat-Medium.woff) format('woff'),
+        url(../css/fonts/Montserrat-Medium.svg) format('svg'),
+        url(../css/fonts/Montserrat-Medium.eot) format('eot'),
+        url(../css/fonts/Montserrat-Medium.ttf) format('ttf');
+    font-weight: 500;
+}
+/*
+END TIPOGRAFÍAS
+*/
+
+
+/*
+ESTILOS HEADER-MENU
+*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: var(--white-color);
+}
+
+.logo{
+    max-width: 240px;
+    max-height: 100px;
+}
+
+.nav {
+    padding-right: 1.25rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+.nav-list li a{
+    font-family: "Bangers", system-ui;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.open-menu {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+/*ESTILOS MENÚ RESPONSIVE*/
+@media screen and (max-width: 840px) {
+    .open-menu, .close-menu {
+        display: block;
+        display: flex;
+        justify-content: end;
+    }
+    .logo{
+        max-width: 157px;
+        max-height: 66px;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items:end;
+        gap: 2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: var(--black-color);
+        padding: 2.5rem;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+    .nav-list li a{
+        color: var(--white-color);
+    }
+
+    .menu-burguer {
+        width: 100%;
+    }
+
+    .open-menu, .close-menu-btn{
+        border: none;
+        background-color: transparent;
+    }
+    
+    .close-menu {
+        width: 1.3rem;
+    }
+}
+/*
+END ESTILOS HEADER
+*/
+
+/*
+ESTILOS MAIN PHOTO
+*/
+
+.main-photo {
+    display: block;
+    height: 100%;
+    padding: var(--pane-padding);
+}
+
+.main-photo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
+
+/*ESTILOS MAIN PHOTO RESPONSIVE*/
+@media screen and (max-width: 768px) {
+    .main-photo{
+        padding: 0.94rem 1.56rem 0.94rem 1.56rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-photo{
+        padding: 0.94rem 1.25rem 0.94rem 1.25rem;
+    }
+    .main-photo__img {
+        border-radius: 30px;
+    }
+}
+/*
+END ESTILOS MAIN PHOTO
+*/
+
+/*
+ESTILOS SECCIÓN COCINILLAS HOME
+*/
+
+/*H1*/
+.title-cocinillas {
+    font-family: "Bangers", system-ui;
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: var(--pane-padding);
+}
+
+/*H2*/
+.filter__title {
+    font-family: "Bangers", system-ui;
+    font-size: 2.1em;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    padding: var(--pane-padding)
+}
+
+.container-cocinillas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.75rem;
+}
+
+.cards-cocinillas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding: var(--pane-padding);
+}
+
+.card__cocinillas{
+    width: 100%;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    gap: 2rem;
+}
+
+.card__emotion{
+    width: 60%;   
+}
+
+.card__cocinillas--orange{
+    background-color: var(--orange-color);
+}
+
+.card__cocinillas--yellow{
+    background-color: var(--yellow-color);
+}
+
+.card__cocinillas--blue{
+    background-color: var(--blue-color);
+}
+
+.text-cocinillas, .spicy-cards__back--text{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 20px;
+    text-align: center;
+    padding: 0.94rem;
+    color: var(--white-color);
+}
+
+/*ESTILOS SECCIÓN COCINILLAS HOME RESPONSIVE*/
+@media screen and (max-width: 768px) {
+
+    .container-cocinillas {
+        margin-top: 1.87rem;
+    }
+
+    .title-cocinillas {
+        font-size: 1.9em;
+        padding: 1rem;
+    }
+    .text-cocinillas {
+        font-size: 0.75em;
+        text-align: left;
+        padding: 1.25rem;
+    }
+    .cards-cocinillas{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.25rem;
+    }
+
+    .card__cocinillas{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+    }
+    .card__emotion{
+        width: 50%;
+    }
+
+    .card__emotion{
+        width: 40%;   
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards-cocinillas{
+        padding: 0.94rem 1.25rem 0.94rem 1.25rem;
+    }
+   
+}
+
+/*
+END ESTILOS SECCIÓN COCINILLAS HOME
+*/
+
+/*
+ESTILOS BUSCADOR DE ESPECIAS
+*/
+
+.spicy_filter {
+    background-color: var(--black-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 1.87rem 2.5rem 1.87rem 2.5rem;
+}
+
+.filter__buttons{
+    font-family: "Bangers", system-ui;
+    font-size: 1.4em;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    border: none;
+    padding: 0.62rem 1.87rem 0.62rem 1.87rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/*ESTILOS BUSCADOR DE ESPECIAS RESPONSIVE*/
+@media  screen and (max-width:768px) {
+    .spicy_filter {
+        background-color: transparent;
+    }
+
+    .filter__title{
+        font-size: 1.6em;
+        margin-top: 1.56rem;
+        padding: 1rem;
+    }
+
+    .filter__buttons{
+        font-size: 1.25em;
+        letter-spacing: 2px;
+        padding: 0.62rem 3.12rem 0.62rem 3.12rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+@media  screen and (max-width:400px) {
+    .filter__buttons{
+        padding: 1rem 2.4rem;
+
+    } 
+}
+/*
+END ESTILOS BUSCADOR DE ESPECIAS
+*/
+
+/*
+HOVER BOTONES
+*/
+.filter__buttons--all:hover{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.filter__buttons--asiatica:hover{
+    background-color: var(--orange-color);
+}
+.filter__buttons--mediterranea:hover{
+    background-color: var(--green-color);
+}
+.filter__buttons--arabe:hover{
+    background-color: var(--blue-color);
+}
+.filter__buttons--india:hover{
+    background-color: var(--yellow-color);
+}
+.filter__buttons--latinoamericana:hover{
+    background-color: var(--red-color);
+}
+/*
+END HOVER BOTONES
+*/
+
+/*
+CLASE ACTIVE BOTONES
+*/
+.filter__buttons--all.active{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+.filter__buttons--asiatica.active{
+    background-color: var(--orange-color);
+}
+.filter__buttons--mediterranea.active{
+    background-color: var(--green-color);
+}
+.filter__buttons--arabe.active{
+    background-color: var(--blue-color);
+}
+.filter__buttons--india.active{
+    background-color: var(--yellow-color);
+}
+.filter__buttons--latinoamericana.active{
+    background-color: var(--red-color);
+}
+/*
+END CLASE ACTIVE BOTONES
+*/
+
+
+/*
+CARDS PC
+*/
+.spicy-cardspc{
+    padding: var(--pane-padding);
+
+}
+
+@media screen and (max-width: 768px) {
+    .spicy-cardspc{
+        display: none;
+    }
+}
+
+.card:hover .spicy-cards{
+    transform: rotateY(180deg) ;
+}
+
+.spicy-cards__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.spicy-cards{
+    width: 293px;
+    height: 368px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    margin: 5px;
+}
+
+.spicy-cards__front, .spicy-cards__back{
+    backface-visibility: hidden;
+}
+.spicy-cards__back{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue-color);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.spicy-cards__back--mediterranea {
+    background-color: var(--green-color);
+}
+.spicy-cards__back--arabe{
+    background-color: var(--blue-color);
+}
+.spicy-cards__back--india{
+    background-color: var(--yellow-color);
+}
+.spicy-cards__back--asiatica{
+    background-color: var(--orange-color);
+}
+.spicy-cards__back--latinoamericana{
+    background-color: var(--red-color);
+}
+
+.spicy-cards__btn{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--white-color);
+    padding: 0.62rem 1.25rem 0.62rem 1.25rem;
+    background-color: transparent;
+    border: 2px solid var(--white-color);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.spicy-cards__btn:hover{
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border: 2px solid var(--white-color);
+}
+.spicy-cards__btn--arabe:hover{
+    color: var(--blue-color);
+}
+
+.spicy-cards__btn--mediterranea:hover{
+    color: var(--green-color);
+}
+.spicy-cards__btn--latinoamericana:hover{
+    color: var(--red-color);
+}
+
+.spicy-cards__btn--india:hover{
+    color: var(--yellow-color);
+}
+.spicy-cards__btn--asiatica:hover{
+    color: var(--orange-color);
+}
+
+.spice-cards__img{
+    border-radius: 20px;
+}
+.spicy-cards__front{
+    position: relative;
+}
+.spice-cards__title {
+    position: absolute;
+    bottom: 7vb;
+    left: 7vb;
+    font-family: "Bangers", system-ui;
+    font-size: 1.6em;
+    color: var(--white-color);
+    text-align: center;
+    letter-spacing: 3px;
+    z-index: 1;
+
+}
+/*
+END CARDS PC
+*/
+
+
+/*
+CARDS MOBILE
+*/
+.spicy-cardsmobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .spicy-cardspc{
+        display: block;
+    }
+
+    .spicy-cardsmobile {
+        display: none;
+    }
+}
+
+.spicy-cards__mobile {
+    width: 340px;
+    height: 170px;
+    margin: 5px;
+}
+
+.spice-cards__imgmobile{
+    border-radius: 30px;
+}
+
+.spice-cards__title--mobile{
+    bottom: 15vb;
+    left: 28vb;
+    font-size: 1.12em;
+    text-align: left;    
+}
+
+.btnGo{
+    position: absolute;
+    bottom: 3vb;
+    left: 25vb;
+    width: 90px;
+    height: 90px;
+    z-index: 1;
+}
+/*
+END ESTILOS BUSCADOR DE ESPECIAS
+*/
+
+/*
+ESTILOS ABOUT ME
+*/
+.title-aboutme {
+    font-family: "Bangers", system-ui;
+    font-size: 2.1em;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 3.12rem;
+    padding: var(--pane-padding)
+}
+
+.about-me__title, .tips__title {
+    font-family: "Bangers", system-ui;
+    font-size: 1.9em;
+    color: var(--white-color);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.about-me, .tips, .shopandrecipes {
+    margin-top: 0.62rem;
+    padding: var(--pane-padding);
+}
+
+.about-me__container {
+    padding: var(--pane-padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    gap: 3.75rem;
+}
+.about-me__container--monica {
+    background-color: var(--blue-color);
+}
+
+.about-me__container--tips {
+    background-color: var(--yellow-color);
+}
+
+.about-me__img, .tips__img{
+    border-radius: 35px;
+    width: 40%;
+}
+
+.about-me__paragraph, .tips__list--item, .tips__paragraph {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    text-align: left;
+    color: var(--white-color);
+}
+
+.about-me__paragraph {
+    padding: 1rem;
+}
+
+.tips__paragraph {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.tips__list--item{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1em;
+    list-style: none;
+
+}
+.link-aboutme{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.shopandrecipes__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.shop-container, .recipes-container {
+    border-radius: 50px ;
+    padding: 1.87rem;
+}
+
+.shop-container{
+    background-color: var(--red-color);
+}
+
+.recipes-container{
+    background-color: var(--orange-color);
+}
+.tip__list-container{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+.tips__list--image {
+    width: 20px;
+    margin-right: 5px;
+}
+
+/*ESTILOS ABOUT ME RESPONSIVE*/
+@media screen and (max-width: 768px) {
+    .about-me, .tips, .shopandrecipes {
+        margin-top: 0.62rem;
+        padding: 0.94rem 1.56rem 0.94rem 1.56rem;
+    }
+
+    .about-me__paragraph {
+        font-size: 0.75em;
+        text-align: left;
+        padding: 1.25rem;
+    }
+
+    .title-aboutme{
+        font-size: 1.6em;
+        margin-top: 1.56rem;
+        padding: 1rem;
+    }
+
+    .about-me__title, .tips__title {
+        font-size: 1.25em;
+    }
+
+    .tips__title {
+        margin-top: 1rem;
+    }
+
+    .about-me__container {
+        padding: 0.94rem 1.56rem 0.94rem 1.56rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        gap: 1.87rem;
+    }
+   
+    .about-me__img, .tips__img{
+        border-radius: 35px;
+        width: 100%;
+    }
+    
+    .about-me__paragraph, .tips__list--item, .tips__paragraph {
+        font-size: 0.87em;
+    }
+
+    .about-me__paragraph {
+        padding: 0.62rem 1.25rem 0.62rem 1.25rem;
+    }
+    
+    
+    .shopandrecipes__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+    
+    .shop-container, .recipes-container {
+        border-radius: 30px;
+        padding: 1.87rem;
+    }    
+}
+
+@media screen and (max-width: 500px) {
+    .about-me, .tips, .shopandrecipes {
+        padding: 1rem 1.25rem 1rem 1.25rem;
+    }
+    
+}
+/*
+END ESTILOS ABOUT ME
+*/
+
+/*
+ESTILOS PÁGINA INDIVIDUAL ESPECIA
+*/
+.spice {
+    margin-top: 1.25rem;
+    padding: var(--pane-padding);
+}
+
+.origen, .recetas {
+    margin-top: 4.37rem;
+    padding: var(--pane-padding);
+    margin-bottom: 3.12rem;
+}
+
+.spice_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    gap: 3.75rem;
+    padding: var(--pane-padding);
+}
+
+.origen_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    gap: 1.87rem;
+}
+
+.spice_container--latinoamericana {
+    background-color: var(--red-color);
+}
+
+.spice_container--mediterranea {
+    background-color: var(--green-color);
+}
+
+.spice_container--asiatica {
+    background-color: var(--orange-color);
+}
+
+.spice_container--arabe {
+    background-color: var(--blue-color);
+}
+
+.spice_container--india {
+    background-color: var(--yellow-color);
+}
+
+.spice__title{
+    color: var(--white-color);
+    font-family: "Bangers", system-ui;
+    font-size: 2.1em;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: var(--pane-padding)
+}
+
+.spice__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.recetas__title {
+    font-family: "Bangers", system-ui;
+    font-size: 1.9em;
+    color: var(--black-color);
+    text-align: center;
+    letter-spacing: 2px;
+}
+.origen__title {
+    font-family: "Bangers", system-ui;
+    font-size: 1.9em;
+    color: var(--black-color);
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.spice__img {
+    border-radius: 35px;
+    width: 50%;
+}
+
+.origen__img{
+    width: 100%;
+}
+
+.origen-img-container{
+    width: 100%;
+    background-color: #4a9fe52f;
+    border-radius: 30px;
+    padding: 0.62rem;
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.237);
+}
+
+.spice__paragraph{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    text-align: left;
+    color: var(--white-color);
+}
+
+.origen__paragraph, .recetas__paragraph{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    color: var(--black-color);
+    padding-top: 1.25rem;
+}
+
+.origen__paragraph{
+    text-align: left;
+}
+
+.recetas__paragraph{
+    text-align: center;
+}
+
+.origen__text{
+    padding-left: 1.25rem;
+    width: 100%;
+}
+
+.container_accordeon{
+    padding: 1rem 3.12rem 1rem 3.12rem;
+}
+
+.accordeon{
+    background-color: var(--black-color);
+    font-family: "Bangers", system-ui;
+    font-size: 1.9em;
+    color: var(--white-color);
+    text-align: left;
+    letter-spacing: 2px;
+    padding: var(--pane-padding);
+    border-radius: 50px;
+    width: 100%;
+    margin-top: 1.25rem;
+    margin-bottom: -3.12rem;
+    cursor: pointer;
+    border: none;
+}
+.button_img{
+    width: 27px;
+    margin-right: 0.75rem;
+}
+.panel {
+    display: none;
+    overflow: hidden;
+    padding: var(--pane-padding);
+    background-color: #0000000f;
+    border-radius: 0 0 50px 50px;
+    padding-top: 3.12rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.87em;
+    line-height: 20px;
+    text-align: left;
+    color: var(--black-color);
+}
+
+.recetas_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin: 1.25rem;
+}
+
+.recetas_index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    
+}
+.recetas_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.recetas__img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.237);
+}
+
+.recetas__btn{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.62rem 1.25rem 0.62rem 1.25rem;
+    background-color: transparent;
+    border: 2px solid  var(--black-color);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.recetas__btn:hover{
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+/*PÁGINA INDIVIDUAL ESPECIAS RESPONSIVE*/
+@media screen and (max-width:768px) {    
+    .spice {
+        margin-top: 0.62rem;
+        padding: 1rem 1.56rem 1rem 1.56rem;
+    }
+
+    .origen, .recetas{
+        margin-top: 2.5rem;
+        padding: 1rem 1.56rem 1rem 1.56rem;
+    }
+    
+    .spice_container{
+        padding: var(--pane-padding);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        gap: 1.25rem;
+    }
+   
+    .origen_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+    }
+
+    .container_accordeon{
+        padding: 1rem 1.56rem 1rem 1.56rem;
+    }
+    
+    .spice__title{
+        font-size: 1.6em;
+        margin-top: 0.62rem;
+        padding: 1rem;
+    }
+
+    .origen__title, .recetas__title {
+        font-size: 1.25em;
+        text-align: center;
+    }
+    .spice__img{
+        border-radius: 35px;
+        width: 100%;
+    }
+    .spice__text {
+        gap: 5px;
+    }
+    .spice__paragraph {
+        font-size: 0.87em;
+        margin-bottom: 1.25rem;
+    }
+
+    .origen__paragraph, .recetas__paragraph{
+        font-size: 0.87em;
+    }
+
+    .panel {
+        padding-top: 3.12rem;
+    }
+
+    .accordeon{
+        font-size: 1.25em;
+        margin-top: 1.25rem;
+        margin-bottom: -3.12rem;
+    }
+
+    .button_img{
+        width: 1.25rem;
+    }
+}
+
+@media screen and (max-width:550px){
+    .recetas_index {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .spice, .origen, .container_accordeon, .recetas {
+        padding: 1rem 1.25rem 1rem 1.25rem;
+    }
+
+    .recetas_container{
+        gap: 5px;
+    }
+    
+}
+
+/*
+END ESTILOS ESPECIA PÁGINA
+*/
+
+/*
+ESTILOS PÁGINA INDIVIDUAL RECETA
+*/
+
+/*título y categoría de la receta*/
+
+.title_categoria{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.87rem;
+    margin: 2.5rem 1.25rem 2.5rem 1.25rem;
+}
+
+.receta_categoria {
+    font-family: "Bangers", system-ui;
+    font-size: 2.1em;
+    text-align: center;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    border-radius: 50px;
+    padding: 0.62rem 1.25rem 0.62rem 1.25rem;
+}
+
+.receta_categoria--arabe{
+    background-color: var(--blue-color);
+}
+
+.receta_categoria--latinoamericana{
+    background-color: var(--red-color);
+}
+
+.receta_categoria--mediterranea{
+    background-color: var(--green-color);
+}
+
+.receta_categoria--asiatica{
+    background-color: var(--orange-color);
+}
+
+.receta_categoria--india{
+    background-color: var(--yellow-color);
+}
+
+.receta_name{
+    font-family: "Bangers", system-ui;
+    font-size: 2.1em;
+    color: var(--black-color);
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 1.25rem 0 1.25rem 0;
+}
+
+
+/*imagen + ingredientes + elaboración*/
+
+.main-photo__receta {
+    display: block;
+    height: 100%;
+    padding: var(--pane-padding);
+}
+
+.receta-photo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
+
+.receta_container{
+    width: 100%;
+    padding: var(--pane-padding);
+}
+
+.ingredientes_elaboracion {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    padding: var(--pane-padding);
+}
+
+.ingredientes_container{
+    border-radius: 50px;
+    width: 100%;
+    padding: var(--pane-padding);
+}
+
+.elaboracion_container {
+    border-radius: 50px;
+    width: 100%;
+    padding: var(--pane-padding);
+}
+
+.ingredientes_container--arabe, .elaboracion_container--arabe{
+    background-color: var(--blue-color);
+}
+
+.ingredientes_container--asiatica, .elaboracion_container--asiatica{
+    background-color: var(--orange-color);
+}
+
+.ingredientes_container--mediterranea, .elaboracion_container--mediterranea{
+    background-color: var(--green-color);
+}
+
+.ingredientes_container--india, .elaboracion_container--india{
+    background-color: var(--yellow-color);
+}
+
+.ingredientes_container--latinoamericana, .elaboracion_container--latinoamericana{
+    background-color: var(--red-color);
+}
+
+.ingredientes_title{
+    font-family: "Bangers", system-ui;
+    font-size: 1.9em;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    padding-top: 1.56rem;
+}
+
+.ingredient__list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ingredientes_item--item{
+    list-style-type: none;
+    padding-left: 0.62rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    color: var(--white-color);
+    padding-top: 1rem;
+}
+
+.ingredients_item--image{
+    width: 20px;
+    margin-right: 5px;
+}
+
+/*ESTILOS PÁGINA INDIVIDUAL RECETA RESPONSIVE*/
+@media screen and (max-width:768px){
+    .main-photo__receta{
+        padding: 1rem 1.87rem 1rem 1.87rem;
+    }
+    .receta-photo__img{
+        border-radius: 30px;
+    }
+    .ingredientes_elaboracion {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1rem 1.87rem 1rem 1.87rem;   
+    }
+
+    .title_categoria{
+        display: flex;
+        flex-direction: column;
+        gap: 0.62rem;
+        margin: 0.62rem 0 0.62rem 0;
+    }
+    
+    .receta_categoria, .receta_name {
+        font-size: 1.6em;
+    }
+
+    .receta_name{
+        padding: 0.62rem 0 0.62rem 0;
+    }
+    
+    .ingredientes_container{
+        border-radius: 30px;
+    }
+    .elaboracion_container{
+        border-radius: 30px;
+    }
+
+    .ingredientes_title{
+        font-size: 1.25em;
+        padding-top: 1rem;
+    }
+
+    .ingredientes_item--item{
+        font-size: 0.87em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-photo__receta, .ingredientes_elaboracion, .ingredientes_container, .elaboracion_container {
+        padding: 1rem 1.25rem 1rem 1.25rem;
+    }
+    
+}
+/*
+END ESTILOS PÁGINA INDIVIDUAL RECETA
+*/
+
+/*
+ESTILOS CONTACTO
+*/
+
+.contact__title {
+    font-family: "Bangers", system-ui;
+    font-size: 2.1em;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 3.12rem;
+    padding: var(--pane-padding)
+}
+.contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: var(--pane-padding);
+    gap: 9.37rem;
+}
+
+.contact__text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5rem;
+    gap: 2.5rem;
+}
+
+.contact__paragraph {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 2.5rem 0 2.5rem;
+}
+
+.contact__form {
+    background-color: var(--green-color); 
+    border-radius: 50px;
+    padding: 2.5rem;
+}
+
+.contact__row {
+    padding: 1rem;
+}
+
+.contact__input{
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.87em;
+    text-align: left;
+    padding-left: 0.62rem;
+}
+
+.contact__input--textarea{
+    height: 150px;
+}
+
+.contact__label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.87em;
+}
+
+.send {
+    background-color: black;
+    font-family: "Bangers", system-ui;
+    letter-spacing: 2px;
+    font-size: 1.6em;
+    color: var(--white-color);
+    border: none;
+    border-radius: 50px;
+    padding: 0.62rem 5.6rem 0.62rem 5.6rem;
+    cursor: pointer;
+}
+
+.button-send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ESTILOS PÁGINA CONTACTO RESPONSIVE*/
+@media screen and (max-width: 915px) {
+
+    .contact-container {
+        gap: 0.62rem;
+    }
+
+    .contact__text{
+        padding: 0.62rem;
+    }
+
+    .contact__title{
+        font-size: 1.6em;
+        margin-top: 1.25rem;
+        padding: 1rem 1.25rem 1rem 1.25rem;
+    }
+    
+    .contact__paragraph {
+        font-size: 0.87em;
+        line-height: 20px;
+        text-align: center;
+        padding: 0 0.62rem 0 0.62rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.87rem;
+    }
+
+    .contact__text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0.62rem;
+    }
+
+    .contact__title{
+        font-size: 1.9em;
+    }
+    
+    .contact__paragraph {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 0.87em;
+        line-height: 20px;
+        text-align: center;
+        padding: 0 0.62rem 0 0.62rem;
+    }
+}
+/*
+END ESTILOS CONTACTO
+*/
+
+/*
+ESTILOS TEXTOS LEGALES
+*/
+
+.title-legal {
+    font-family: "Bangers", system-ui;
+    font-size: 2.1em;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 3.12rem;
+    padding: var(--pane-padding)
+}
+
+.legal__title {
+    font-family: "Bangers", system-ui;
+    font-size: 1.9em;
+    color: var(--black-color);
+    text-align: center;
+    letter-spacing: 2px;
+    padding: var(--pane-padding)
+}
+
+.legal__subtitle{
+    font-family: "Bangers", system-ui;
+    font-size: 1.5em;
+    color: var(--black-color);
+    text-align: center;
+    letter-spacing: 2px;
+    padding: var(--pane-padding)
+}
+
+ .legal__paragraph {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 20px;
+    text-align: left;
+    color: var(--black-color);
+    padding: var(--pane-padding)
+}
+
+@media screen and (max-width: 768px) {
+    .title-legal { 
+        font-size: 1.6em;
+        margin-top: 1.25rem;
+        padding: 1rem 1.56rem 1rem 1.56rem;
+    }
+    
+    .legal__title {
+        font-size: 1.25em;
+        padding: 1rem 1.56rem 1rem 1.56rem;
+    }
+
+    .legal__subtitle {
+        font-size: 1em;
+        padding: 1rem 1.56rem 1rem 1.56rem;
+    }
+    
+     .legal__paragraph {
+        font-size: 0.87em;
+        line-height: 20px;
+        padding: 1rem 1.56rem 1rem 1.56rem;
+    }
+}
+
+/*
+END ESTILOS TEXTOS LEGALES
+*/
+
+
+/*
+ESTILOS FOOTER
+*/
+.footer {
+    width: 100%;
+    background-color: var(--black-color);
+    border-radius: 50px 50px 0 0;
+    margin-top: 1.87rem;
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.12rem;
+}
+
+.footer-logo__img {
+    width: 20%;
+
+}
+
+.footer-media{
+    display: flex;
+    flex-direction: column;
+    padding: 0.62rem;
+}
+
+.icons-social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.title-social-media{
+    font-family: "Bangers", system-ui;
+    color: var(--white-color);
+    font-size: 1.25em;
+    letter-spacing: 2px;
+}
+
+.footer__side {
+    display: flex;
+    flex-direction: row;
+    gap: 6.25rem;
+}
+
+.footer__menu li a, .footer__legaltext li a{
+    display: flex;
+    flex-direction: column;
+    font-family: "Bangers", system-ui;
+    letter-spacing: 2px;
+    font-size: 1em;
+    line-height: 20px;
+    color: var(--white-color);
+    text-align: center;
+    list-style-type: none;
+    gap: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn_rrss{
+    background-color: var(--black-color);
+    border: none;
+}
+
+.img-socialmedia__img{
+    width: 90%;
+    cursor: pointer;
+}
+
+/*ESTILOS FOOTER RESPONSIVE*/
+@media screen and (max-width: 768px) {
+
+    .footer {
+        border-radius: 45px 45px 0 0;
+        margin-top: 1.87rem;
+    }
+    
+    .footer_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem;
+        gap: 1.25rem;
+    }
+    
+    .footer-logo__img {
+        width: 50%;
+    }
+
+    .title-social-media{
+        font-size: 1.12em;
+        text-align: center;
+    }
+
+    .footer-media{
+        gap: 0.62rem;
+    }  
+
+
+    .icons-social-media{
+        justify-content: center;
+    }
+
+    .footer__side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+    
+    .footer__menu li a, .footer__legaltext li a{
+        font-size: 0.87em;
+        line-height: 16px;
+    }
+
+    .img-socialmedia__img{
+        width: 80%;
+    }
+}
+/*
+END ESTILOS FOOTER
+*/

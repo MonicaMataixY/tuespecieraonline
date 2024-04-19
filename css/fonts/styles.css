@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Bangers-Regular';
+  src: url(./Bangers-Regular.eot);
+  src: url(./Bangers-Regular.eot?#iefix) format('embedded-opentype'),
+       url(./Bangers-Regular.otf) format('otf'),
+       url(./Bangers-Regular.svg#Bangers-Regular) format('svg'),
+       url(./Bangers-Regular.ttf) format('truetype'),
+       url(./Bangers-Regular.woff) format('woff'),
+       url(./Bangers-Regular.woff2) format('woff2');
+}
