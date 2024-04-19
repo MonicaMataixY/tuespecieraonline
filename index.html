@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/fun.js" defer></script>
+    <link rel="icon" href="img/favicon.svg" type="image/x-icon">
+    <title>Tu Especiera Online | Aprende a usar tus especias</title>
+</head>
+
+<body>
+    <!--HEADER-MENU-->
+    <header>
+        <img class="logo" src="img/LOGO.svg" alt="logo">
+            <button id="open-menu" class="open-menu" title="abrir menu"><img class="menu-burguer" src="img/menu-burguer.svg" alt="menu-burguer"></button>
+            <nav class="nav" id="nav"> 
+                <button id="close-menu" class="close-menu-btn" title="cerrar menu"><img class="close-menu" src="img/close-menu.svg" alt="close-menu"></button>
+                <ul class="nav-list">
+                    <li><a href="index.html" title="inicio">Inicio</a></li>
+                    <li><a href="about-me.html" title="sobre mi">Sobre mí</a></li>
+                    <li><a href="index.html#filter-spicy" title="encuentra tu especia">Encuentra tu especia</a></li>
+                    <li><a href="contact.html" title="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+    </header>
+    <!--/HEADER-MENU-->
+
+    <!--MAIN IMAGE-->
+    <picture class="main-photo">
+        <source media="(min-width: 1440px)" srcset="img/portada_1920X1080.webp">
+        <source media="(min-width: 960px)" srcset="img/portada_1200X675.webp">
+        <source media="(min-width: 380px)" srcset="img/portada_768X432.webp">
+        <img class="main-photo__img" src="img/portada_1920X1080.webp" alt="slide portada especias">
+    </picture>
+    <!--/MAIN IMAGE-->
+
+    <!--ESPACIO RESERVADO PARA EL MÁS COCINILLAS-->
+    <section class="container-cocinillas">
+        <h1 class="title-cocinillas">Conoce tus especias: un espacio reservado para el más cocinillas</h2>    
+        <div class="cards-cocinillas">
+            <div class="card__cocinillas card__cocinillas--orange">
+                <img class="card__emotion" src="img/card-home-confuso.webp" alt="confuso">
+                <p class="text-cocinillas">¿Tienes un montón de especias en casa y no sabes ni para qué se usan?</p>
+            </div>
+            <div class="card__cocinillas card__cocinillas--yellow">
+                <img class="card__emotion" src="img/card-home-pensando.webp" alt="pensando">
+                <p class="text-cocinillas">Busca abajo tu especia o el tipo de comida que quieres preparar.</p>
+            </div>
+            <div class="card__cocinillas card__cocinillas--blue">
+                <img class="card__emotion" src="img/card-home-feliz.webp" alt="feliz">
+                <p class="text-cocinillas">Y no solo te daré info chula sobre tu especia sino que tendrás alguna receta para que puedas practicar.</p>
+            </div>
+        </div>
+    </section>
+    <!--/ESPACIO RESERVADO PARA EL MÁS COCINILLAS-->
+   
+    <!--BUSCADOR DE ESPECIAS-->
+    
+    <!-- FILTER PC-->
+    <h2 class="filter__title" id="filter-spicy">ENCUENTRA TUS ESPECIAS SEGÚN EL TIPO DE C0MIDA QUE QUIERAS COCINAR</h2>
+    <section class="spicy_filter">
+        <div class="filter__buttons">
+            <button id="filter" class="filter__buttons filter__buttons--all" data-filter="all" title="todas">Todas</button>
+            <button id="filter" class="filter__buttons filter__buttons--asiatica" data-filter="asiatica" title="sureste asiático">sureste asiático</button>
+            <button id="filter" class="filter__buttons filter__buttons--mediterranea" data-filter="mediterranea" title="mediterranea">mediterránea</button>
+            <button id="filter" class="filter__buttons filter__buttons--arabe" data-filter="arabe" title="arabe">árabe</button>
+            <button id="filter" class="filter__buttons filter__buttons--india" data-filter="india" title="india">india</button>
+            <button id="filter" class="filter__buttons filter__buttons--latinoamericana" data-filter="latinoamericana" title="latinoamericana">latinoamericana</button>
+        </div>
+    </section>
+    <!-- /FILTER PC-->
+
+    <!--CARDS PC -->
+    <section class="spicy-cardspc" id="spicy-cardspc">
+        <div class="spicy-cards__container">
+        
+            <div class="card">
+                <div class="spicy-cards" data-category="latinoamericana">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Achiote</h4>
+                        <img class="spice-cards__img" src="img/achiote.webp" alt="achiote">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--latinoamericana">
+                        <p class="spicy-cards__back--text">Se suele llamar "azafrán del pobre" y se utiliza como colorante natural desde hace siglos. También aporta notas de pimienta y un sabor ligeramente cítrico, ahumado y terroso.</p>
+                        <a href="achiote.html" title="achiote"> <button class="spicy-cards__btn spicy-cards__btn--latinoamericana" title="quiero saber más">Quiero saber más</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Ajo</h4>
+                        <img class="spice-cards__img" src="img/ajo.webp" alt="ajo">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--asiatica">
+                        <p class="spicy-cards__back--text">Uno de los más antiguos de los condimentos que fue calificado como la "Gran Panacea". Amplifica los aromas y aporta un sabor más que característico a tus platos.</p>
+                        <a href="ajo.html" title="ajo"><button class="spicy-cards__btn spicy-cards__btn--asiatica" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Anís estrellado</h4>
+                        <img class="spice-cards__img" src="img/anis estrellado.webp" alt="anís estrellado">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--asiatica">
+                        <p class="spicy-cards__back--text">Se cultiva desde hace más de 3.000 años con fines culinarios y medicinales. Es un ingrediente imprescindible en las cocinas china, india y vietnamita.</p>
+                        <a href="anis-estrellado.html" title="anis estrellado"><button class="spicy-cards__btn spicy-cards__btn--asiatica" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="latinoamericana">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Cacao</h4>
+                        <img class="spice-cards__img" src="img/cacao.webp" alt="cacao">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--latinoamericana">
+                        <p class="spicy-cards__back--text">El cacao ya se utilizaba en el 1.500 a.C. en el sur de México. Tiene un sabor complejo con notas amargas, terrosas y fragantes.</p>
+                        <a href="cacao.html" title="cacao"> <button class="spicy-cards__btn spicy-cards__btn--latinoamericana" title="quiero saber más">Quiero saber más</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Canela</h4>
+                        <img class="spice-cards__img" src="img/canela.webp" alt="canela">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--asiatica">
+                        <p class="spicy-cards__back--text">La canela se cultiva en diversas regiones de asia y en sí no tiene un sabor dulce si no que potencia la percepción del dulzor del resto de ingredientes.</p>
+                        <a href="canela.html" title="canela"><button class="spicy-cards__btn spicy-cards__btn--asiatica" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="india">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Cardamomo</h4>
+                        <img class="spice-cards__img" src="img/cardamomo.webp" alt="cardamomo">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--india">
+                        <p class="spicy-cards__back--text">El cardamomo se usa con fines culinarios y medicinales desde  hace más de 2.000 años, además puede utilizarse para platos dulces y salados.</p>
+                        <a href="cardamomo.html" title="cardamomo"><button class="spicy-cards__btn spicy-cards__btn--india" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="latinoamericana">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Cayena</h4>
+                        <img class="spice-cards__img" src="img/cayena.webp" alt="cayena">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--latinoamericana">
+                        <p class="spicy-cards__back--text">Es una variedad de guindilla imprescindible para la cocina latinoamericana.</p>
+                        <a href="cayena.html"  title="cayena"><button class="spicy-cards__btn spicy-cards__btn--latinoamericana" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="mediterranea">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Cilantro</h4>
+                        <img class="spice-cards__img" src="img/cilantro en grano.webp" alt="cilantro">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--mediterranea">
+                        <p class="spicy-cards__back--text">Tiene su origen en Israel y Egipto. Su sabor agridulce recuerda al de la corteza de naranja deshidratada.</p>
+                        <a href="cilantro.html" title="cilantro"><button class="spicy-cards__btn spicy-cards__btn--mediterranea" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Clavo</h4>
+                        <img class="spice-cards__img" src="img/clavos.webp" alt="clavo">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--asiatica">
+                        <p class="spicy-cards__back--text">El clavo se ha utilizado como aromatizador durante miles de años y en la Edad Media se empezó a darle un uso más culinario.</p>
+                        <a href="clavo.html" title="clavo"><button class="spicy-cards__btn spicy-cards__btn--asiatica" title="quiero saber más">Quiero saber más</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="arabe">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Comino</h4>
+                        <img class="spice-cards__img" src="img/comino.webp" alt="comino">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--arabe">
+                        <p class="spicy-cards__back--text">Se hallaron restos de comino en las pirámides de Egipto. Es un elemento esencial en la cocina de África del Norte. </p>
+                        <a href="comino.html" title="comino"><button class="spicy-cards__btn spicy-cards__btn--arabe" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="india">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Cúrcuma</h4>
+                        <img class="spice-cards__img" src="img/curcuma.webp" alt="curcuma">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--india">
+                        <p class="spicy-cards__back--text">La cúrculma se utiliza como pigmento, por sus beneficios antiinflamatorio y antimicrobiano, además de sus dotes culinarias.</p>
+                        <a href="curcuma.html" title="curcuma"><button class="spicy-cards__btn spicy-cards__btn--india" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="india">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Curry</h4>
+                        <img class="spice-cards__img" src="img/curry.webp" alt="curry">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--india">
+                        <p class="spicy-cards__back--text">Podemos decir que el curry es la joya de las especias de la India. Aporta aroma y sabor a todos tus platos.</p>
+                        <a href="curry.html" title="curry"><button class="spicy-cards__btn spicy-cards__btn--india" title="quiero saber más">Quiero saber más</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Jengibre</h4>
+                        <img class="spice-cards__img" src="img/jengibre.webp" alt="jengibre">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--asiatica">
+                        <p class="spicy-cards__back--text">El jengibre fue una de las primeras especias que llegaron a Europa. Es muy picante, con un sabor cítrico y amaderado.</p>
+                        <a href="jengibre.html" title="jengibre"><button class="spicy-cards__btn spicy-cards__btn--asiatica" title="quiero saber más"> Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="mediterranea">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Laurel</h4>
+                        <img class="spice-cards__img" src="img/laurel.webp" alt="laurel">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--mediterranea">
+                        <p class="spicy-cards__back--text">Era símbolo de victoria en la cultura griega y romana. Debe añadirse al inicio de la cocción para que desprenda todo su aroma.</p>
+                        <a href="laurel.html" title="laurel"><button class="spicy-cards__btn spicy-cards__btn--mediterranea" title="quiero saber más">Quiero saber más</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="india">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Nuez moscada</h4>
+                        <img class="spice-cards__img" src="img/nuez moscada.webp" alt="nuez moscada">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--india">
+                        <p class="spicy-cards__back--text">Durante muchos años los mercaderes guardaron la nuez moscada en secreto para proteger su mercancía. Tiene un aroma dulce y amaderado que combina para platos dulces y salados.</p>
+                        <a href="nuez-moscada.html" title="nuez moscada"><button class="spicy-cards__btn spicy-cards__btn--india" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="mediterranea">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Orégano</h4>
+                        <img class="spice-cards__img" src="img/orégano.webp" alt="orégano">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--mediterranea">
+                        <p class="spicy-cards__back--text">El orégano pertenece a la familia de la menta y aporta un aroma delicioso a tus platos.</p>
+                        <a href="oregano.html" title="oregano"><button class="spicy-cards__btn  spicy-cards__btn--mediterranea" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="mediterranea">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Pimentón</h4>
+                        <img class="spice-cards__img" src="img/pimenton.webp" alt="pimentón">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--mediterranea">
+                        <p class="spicy-cards__back--text">El pimentón es apreciado por sus aromas ahumados, terrosos, su picante y su sabor afrutado.</p>
+                        <a href="pimenton.html" title="pimenton"><button class="spicy-cards__btn  spicy-cards__btn--mediterranea" title="quiero saber más">Quiero saber más</button></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="spicy-cards" data-category="latinoamericana">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Pimienta de Jamaica</h4>
+                        <img class="spice-cards__img" src="img/pimienta de jamaica.webp" alt="pimienta de jamaica">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--latinoamericana">
+                        <p class="spicy-cards__back--text">Los mayas utilizaban esta especia con fines medicinales. Por sus complejos sabores, se utiliza para condimentar platos dulces y salados.</p>
+                        <a href="pimienta-de-jamaica.html" title="pimienta de jamaica"><button class="spicy-cards__btn spicy-cards__btn--latinoamericana" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="arabe">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Ras el hanout</h4>
+                        <img class="spice-cards__img" src="img/ras el  hanout.webp" alt="ras el hanout">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--arabe">
+                        <p class="spicy-cards__back--text">El Ras el Hanout es la mezcla de especias más vendida en países árabes, sirve casi para todo y no contiene una sola receta única, sino que va cambiando según cada casa o familia.</p>
+                        <a href="ras-el-hanout.html" title="ras el hanout"><button class="spicy-cards__btn spicy-cards__btn--arabe" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards" data-category="india">
+                    <div class="spicy-cards__front">
+                        <h4 class="spice-cards__title">Sésamo</h4>
+                        <img class="spice-cards__img" src="img/sesamo.webp" alt="sésamo">
+                    </div>
+                    <div class="spicy-cards__back spicy-cards__back--india">
+                        <p class="spicy-cards__back--text">El sésamo se utiliza en platos dulces, salsas, purés y como elemento decorativo.</p>
+                        <a href="sesamo.html" title="sesamo"><button class="spicy-cards__btn spicy-cards__btn--india" title="quiero saber más">Quiero saber más</button></a> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--/CARDS PC -->
+
+    <!--CARDS MOBILE-->
+    <section class="spicy-cardsmobile" id="spicy-cardsmobile">
+        <div class="spicy-cards__containermobile">
+        
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="latinoamericana">
+                    <div class="spicy-cards__front">
+                        <a href="achiote.html" title="achiote"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Achiote</h4>
+                        <img class="spice-cards__img" src="img/achiote-mobile.webp" alt="achiote">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <a href="ajo.html" title="ajo"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Ajo</h4>
+                        <img class="spice-cards__img" src="img/ajo-mobile.webp" alt="ajo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <a href="anis-estrellado.html" title="anis estrellado"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Anís estrellado</h4>
+                        <img class="spice-cards__img" src="img/anis-estrellado-mobile.webp" alt="anís estrellado">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="latinoamericana">
+                    <div class="spicy-cards__front">
+                        <a href="cacao.html" title="cacao"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Cacao</h4>
+                        <img class="spice-cards__img" src="img/cacao-mobile.webp" alt="cacao">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <a href="canela.html" title="canela"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Canela</h4>
+                        <img class="spice-cards__img" src="img/canela-mobile.webp" alt="canela">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="india">
+                    <div class="spicy-cards__front">
+                        <a href="cardamomo.html" title="cardamomo"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Cardamomo</h4>
+                        <img class="spice-cards__img" src="img/cardamomo-mobile.webp" alt="cardamomo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="latinoamericana">
+                    <div class="spicy-cards__front">
+                        <a href="cayena.html" title="cayena"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Cayena</h4>
+                        <img class="spice-cards__img" src="img/cayena-mobile.webp" alt="cayena">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="mediterranea">
+                    <div class="spicy-cards__front">
+                        <a href="cilantro.html" title="cilantro"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Cilantro</h4>
+                        <img class="spice-cards__img" src="img/cilantro-mobile.webp" alt="cilantro">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <a href="clavo.html" title="clavo"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Clavo</h4>
+                        <img class="spice-cards__img" src="img/clavo-mobile.webp" alt="clavo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="arabe">
+                    <div class="spicy-cards__front">
+                        <a href="comino.html" title="comino"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Comino</h4>
+                        <img class="spice-cards__img" src="img/comino-mobile.webp" alt="comino">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="india">
+                    <div class="spicy-cards__front">
+                        <a href="curcuma.html" title="curcuma"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Cúrcuma</h4>
+                        <img class="spice-cards__img" src="img/curcuma-mobile.webp" alt="curcuma">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="india">
+                    <div class="spicy-cards__front">
+                        <a href="curry.html" title="curry"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Curry</h4>
+                        <img class="spice-cards__img" src="img/curry-mobile.webp" alt="curry">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="asiatica">
+                    <div class="spicy-cards__front">
+                        <a href="jengibre.html" title="jengibre"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Jengibre</h4>
+                        <img class="spice-cards__img" src="img/jengibre-mobile.webp" alt="jengibre">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="mediterranea">
+                    <div class="spicy-cards__front">
+                        <a href="laurel.html" title="laurel"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Laurel</h4>
+                        <img class="spice-cards__img" src="img/laurel-mobile.webp" alt="laurel">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="india">
+                    <div class="spicy-cards__front">
+                        <a href="nuez-moscada.html" title="nuez moscada"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Nuez moscada</h4>
+                        <img class="spice-cards__img" src="img/nuez-moscada-mobile.webp" alt="nuez moscada">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="mediterranea">
+                    <div class="spicy-cards__front">
+                        <a href="oregano.html" title="oregano"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Orégano</h4>
+                        <img class="spice-cards__img" src="img/oregano-mobile.webp" alt="orégano">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="mediterranea">
+                    <div class="spicy-cards__front">
+                        <a href="pimenton.html" title="pimenton"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Pimentón</h4>
+                        <img class="spice-cards__img" src="img/pimenton-mobile.webp" alt="pimentón">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="latinoamericana">
+                    <div class="spicy-cards__front">
+                        <a href="pimienta-de-jamaica.html" title="pimienta de jamaica"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Pimienta de Jamaica</h4>
+                        <img class="spice-cards__img" src="img/pimienta-de-jamaica-mobile.webp" alt="pimienta de jamaica">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="arabe">
+                    <div class="spicy-cards__front">
+                        <a href="ras-el-hanout.html" title="ras el hanout"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Ras el hanout</h4>
+                        <img class="spice-cards__img" src="img/ras-el-hanout-mobile.webp" alt="ras el hanout">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="spicy-cards__mobile" data-category="india">
+                    <div class="spicy-cards__front">
+                        <a href="sesamo.html" title="sesamo"><img class="btnGo" src="img/flecha-mobile.svg" alt="flecha"></a>
+                        <h4 class="spice-cards__title spice-cards__title--mobile">Sésamo</h4>
+                        <img class="spice-cards__img" src="img/sesamo-mobile.webp" alt="sésamo">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--/CARDS MOBILE-->
+    <!--/BUSCADOR DE ESPECIAS-->
+
+    
+ <!--FOOTER-->
+ <footer class="footer">
+    <div class="footer_container">
+            <img class="footer-logo__img" src="img/LOGO-BLACK.svg" alt="logo image">
+        <div class="footer-media">
+            <h4 class="title-social-media">Encuéntrame en:</h4>
+            <div class="icons-social-media">
+                <button class="btn_rrss" title="instagram"><a href="https://www.instagram.com/monicamataix/" target="_blank" rel="noreferrer" title="instagram"><img class="img-socialmedia__img" src="img/instagram.svg" alt="instagram"></a></button>
+                <button class="btn_rrss" title="tik tok"><a href="https://www.tiktok.com/@monicamataix4" target="_blank" rel="noreferrer" title="tik tok"><img class="img-socialmedia__img" src="img/tiktok.svg" alt="tiktok"></a></button>
+                <button class="btn_rrss" title="youtube"><a href="https://www.youtube.com/channel/UCCZg-F0XSx9ezc0IskjKP2w" target="_blank" rel="noreferrer" title="youtube"><img class="img-socialmedia__img" src="img/youtube.svg" alt="youtube"></a></button>
+            </div>
+        </div>
+
+        <nav class="footer__side">
+            <menu class="footer__menu">
+                <li class="footer__menu-item"><a href="index.html">Inicio</a></li>
+                <li class="footer__menu-item"><a href="about-me.html">Sobre mí</a></li>
+                <li class="footer__menu-item"><a href="index.html#filter-spicy">Encuentra tu especia</a></li>
+                <li class="footer__menu-item"><a href="contact.html">Contacto</a></li>
+            </menu>
+            <menu class="footer__legaltext">
+                <li class="footer__menu-item"><a href="aviso-legal.html" title="aviso legal">Aviso Legal</a></li>
+                <li class="footer__menu-item"><a href="politica-de-privacidad.html" title="politica de privacidad">Política de privacidad</a></li>
+                <li class="footer__menu-item"><a href="politica-de-cookies.html" title="politica de cookies">Política de cookies</a></li>
+            </menu>
+        </nav>
+    </div>
+</footer>
+<!--/FOOTER-->
+    
+</body>
+</html>

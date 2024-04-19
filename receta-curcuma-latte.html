@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/funspicypage.js" defer></script>
+    <link rel="icon" href="img/favicon.svg" type="image/x-icon">
+    <title>Receta Cúrcuma Latte</title>
+</head>
+
+<body>
+    <!--HEADER-MENU-->
+    <header>
+        <img class="logo" src="img/LOGO.svg" alt="logo">
+            <button id="open-menu" class="open-menu" title="abrir menu"><img class="menu-burguer" src="img/menu-burguer.svg" alt="menu-burguer"></button>
+            <nav class="nav" id="nav"> 
+                <button id="close-menu" class="close-menu-btn" title="cerrar menu"><img class="close-menu" src="img/close-menu.svg" alt="close-menu"></button>
+                <ul class="nav-list">
+                    <li><a href="index.html" title="inicio">Inicio</a></li>
+                    <li><a href="about-me.html" title="sobre mi">Sobre mí</a></li>
+                    <li><a href="index.html#filter-spicy" title="encuentra tu especia">Encuentra tu especia</a></li>
+                    <li><a href="contact.html" title="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+    </header>
+    <!--/HEADER-MENU-->
+
+    <!--TITLE + CATEGORY-->
+    <div class="title_categoria">
+        <h2 class="receta_categoria receta_categoria--india">Cocina India</h2>
+        <h2 class="receta_name">Cúrcuma Latte</h2>
+    </div>
+    <!--/TITLE + CATEGORY-->
+
+    <!--IMAGEN RECETA-->
+    <picture class="main-photo__receta">
+        <source media="(min-width: 1440px)" srcset="img/curcuma-latte-1920x1080.webp">
+        <source media="(min-width: 960px )" srcset="img/curcuma-latte-1200x675.webp">
+        <source media="(min-width: 380px)" srcset="img/curcuma-latte-768x432.webp">
+        <img class="receta-photo__img" src="img/curcuma-latte-1920x1080.webp" alt="foto receta">
+    </picture>
+    <!--/IMAGEN RECETA -->
+
+    <!--ELABORACIÓN + INGREDIENTES-->
+    <section class="ingredientes_elaboracion">
+        <div class="ingredientes_container ingredientes_container--india">
+            <h4 class="ingredientes_title">Ingredientes para 1 taza:</h4>
+                <ul class="ingredient__list-container">
+                    <li class="ingredientes_item--item"><img class="ingredients_item--image" src="img/pepper.svg" alt="pepper">1 vaso de leche.</li> 
+                    <li class="ingredientes_item--item"><img class="ingredients_item--image" src="img/pepper.svg" alt="pepper">1 cda. de cúrcuma en polvo.</li> 
+                    <li class="ingredientes_item--item"><img class="ingredients_item--image" src="img/pepper.svg" alt="pepper">Canela al gusto.</li>               
+                    <li class="ingredientes_item--item"><img class="ingredients_item--image" src="img/pepper.svg" alt="pepper">Miel o azúcar moreno para endulzar.</li> 
+                </ul>
+       </div>
+
+        <div class="elaboracion_container elaboracion_container--india">
+            <h4 class="ingredientes_title">Elaboración:</h4>
+                <p class="ingredientes_item--item">1. En un cazo a fuego medio vierte todos los ingredientes.</p> 
+                <p class="ingredientes_item--item">2. Remueve bien hasta que esté todo integrado.</p> 
+                <p class="ingredientes_item--item">3. Cuando empiece e hervir sácalo del fuego y endulza con miel o azúcar moreno.</p>
+                <p class="ingredientes_item--item">4.Dejamos templar y ya lo tenemos.</p> 
+                <p class="ingredientes_item--item">Imagen de azerbaijan_stockers en Freepik.</p> 
+               
+        </div>
+    </section>
+    <!--/ELABORACIÓN + INGREDIENTES-->
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <div class="footer_container">
+                <img class="footer-logo__img" src="img/LOGO-BLACK.svg" alt="logo image">
+            <div class="footer-media">
+                <h4 class="title-social-media">Encuéntrame en:</h4>
+                <div class="icons-social-media">
+                    <button class="btn_rrss" title="instagram"><a href="https://www.instagram.com/monicamataix/" target="_blank" rel="noreferrer" title="instagram"><img class="img-socialmedia__img" src="img/instagram.svg" alt="instagram"></a></button>
+                    <button class="btn_rrss" title="tik tok"><a href="https://www.tiktok.com/@monicamataix4" target="_blank" rel="noreferrer" title="tik tok"><img class="img-socialmedia__img" src="img/tiktok.svg" alt="tiktok"></a></button>
+                    <button class="btn_rrss" title="youtube"><a href="https://www.youtube.com/channel/UCCZg-F0XSx9ezc0IskjKP2w" target="_blank" rel="noreferrer" title="youtube"><img class="img-socialmedia__img" src="img/youtube.svg" alt="youtube"></a></button>
+                </div>
+            </div>
+
+            <nav class="footer__side">
+                <menu class="footer__menu">
+                    <li class="footer__menu-item"><a href="index.html">Inicio</a></li>
+                    <li class="footer__menu-item"><a href="about-me.html">Sobre mí</a></li>
+                    <li class="footer__menu-item"><a href="index.html#filter-spicy">Encuentra tu especia</a></li>
+                    <li class="footer__menu-item"><a href="contact.html">Contacto</a></li>
+                </menu>
+                <menu class="footer__legaltext">
+                    <li class="footer__menu-item"><a href="aviso-legal.html" title="aviso legal">Aviso Legal</a></li>
+                    <li class="footer__menu-item"><a href="politica-de-privacidad.html" title="politica de privacidad">Política de privacidad</a></li>
+                    <li class="footer__menu-item"><a href="politica-de-cookies.html" title="politica de cookies">Política de cookies</a></li>
+                </menu>
+            </nav>
+        </div>
+    </footer>
+    <!--/FOOTER-->
+</body>
+</html>
